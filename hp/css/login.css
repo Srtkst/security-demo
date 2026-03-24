@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+section {
+    margin: 40px 0;
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 10px;
+}
+input {
+    padding: 8px;
+    margin: 5px;
+}
+button {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+.success { color: #00ff88; }
+.fail { color: #ff4444; }
+.hidden { display: none; }

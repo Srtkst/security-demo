@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>セキュリティ体験授業</title>
+        <link rel="stylesheet" href="css/login.css">
+    </head>
+
+    <body>
+        <h1>セキュリティ体験授業</h1>
+
+        <!-- ログインフォーム -->
+        <section>
+            <h2>脆弱ログイン体験</h2>
+            <p>山田花子さんのIDとPASSを推測してログインしてみよう</p><br>
+            <p>
+                山田花子の情報
+                <ul>
+                    <li>誕生日: 2007年04月06日</li>
+                    <li>メールアドレス: yamada.hanako@example.com</li>
+    
+            </p>
+            
+            <button onclick="toggleHint(this)">ヒントを見る</button>
+            <p class="hintBox">
+                ヒント：<br>
+                山田花子さんの誕生日は2007年04月06日みたいで、<br>
+                gmail:yamada.hanako@example.com、PASSは「名前 + 生まれた年」が怪しいね。
+            </p>
+
+            <br>
+            <input type="text" id="username" placeholder="メールアドレス">
+            <input type="password" id="password" placeholder="パスワード">
+            <button onclick="login()">ログイン</button>
+
+            <p id="loginResult"></p>
+        </section>
+
+    <!-- パスワード強度チェック -->
+        <section>
+            <h2>パスワード強度チェック</h2>
+            <input type="text" id="pwcheck" placeholder="パスワードを入力">
+            <button onclick="checkPassword()">強度チェック</button>
+            <p id="pwStrength"></p>
+        </section>
+
+    <!--暗号解読-->
+        <section>
+            <h2>暗号解読体験</h2>
+            <p>次の暗号を解読してみよう！</p>
+            <p>暗号文: "Uifsf jt b tfdsfu dpef"</p>
+
+            <button onclick="toggleHint(this)">ヒントを見る</button>
+            <p class="hintBox">
+                ヒント：<br>
+                これはシーザー暗号で、アルファベットを1文字ずらしているよ。
+            </p>
+
+            <br>
+            <input type="text" id="cipherInput" placeholder="解読結果を入力">
+            <button onclick="decrypt()">解読</button>
+            <p id="decryptResult"></p>
+        </section>
+
+        <script src="js/login.js"></script>
+    </body>
+</html>
