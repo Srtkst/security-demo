@@ -22,3 +22,4 @@ button {
 .success { color: #00ff88; }
 .fail { color: #ff4444; }
 .hidden { display: none; }
+.hintBox { display: none; }
